@@ -27,7 +27,7 @@ List your skills or areas of expertise relevant to your projects. For example:
 
 Feel free to reach out to me via email or connect with me on social media:
 
-- Email: [your_email@example.com](sendmailsonugupta@gmail.com)
+- Email: [sendmailsonugupta@gmail.com](sendmailsonugupta@gmail.com)
 
 
 
