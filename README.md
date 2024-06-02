@@ -1,13 +1,13 @@
 # official
 # Welcome to My GitHub Page!
 
-![Banner Image](link_to_banner_image)
+![Banner Image](sonu.jpeg)
 
-Hey there! I'm [Your Name], a [Your Profession or Interest] based in [Your Location]. Welcome to my GitHub page where I showcase my projects and contributions.
+Hey there! I'm [Sonu Gupta], a [Business Marketing] based in [Bihar, India]. Welcome to my GitHub page where I showcase my projects and contributions.
 
 ## About Me
 
-Introduce yourself briefly. Talk about your background, interests, and what motivates you to work on projects.
+Hello! I am Sonu Gupta. I am a 21 year old young man who is a graduate. After my studies, I set foot in the workplace to make my dreams come true. Today I am the CEO of Drownford Marketing Agency, where we create new and innovative marketing strategies for different brands and clients. My passions and hobbies are quite diverse. For me, studying is a journey of infinite knowledge and I am always on the lookout for new subjects to understand and learn. Playing is also a hobby of mine. By playing games, I enjoy completing new challenges and refresh my mind. I believe that every day is a new opportunity to improve yourself and gain new knowledge. This very thought inspires me to grow older at every step..
 
 
 
