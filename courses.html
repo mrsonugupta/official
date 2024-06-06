@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Course Platform</title>
+    <meta name="description" content="Drownford Academy offers a variety of courses to help you enhance your skills in various fields such as Math, Physics, Chemistry, and Biology.">
+    <title>Drownford Academy</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #070303;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
         }
         .container {
-            width: 80%;
+            width: 100%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
+            box-sizing: border-box;
         }
         header {
             background: #000000;
@@ -44,23 +46,24 @@
             color: #333;
         }
         .showcase {
-            background: url('course-banner.jpg') no-repeat center center/cover;
+            background: url('df.png') no-repeat center center/cover;
             color: #fff;
             height: 400px;
             text-align: center;
-            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
         }
-        .showcase h1 {
-            font-size: 40px;
-            margin: 0;
-        }
-        .showcase p {
-            font-size: 20px;
+        .courses-wrapper {
+            text-align: center;
+            margin: 20px 0;
         }
         .courses {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             margin: 20px 0;
         }
         .course {
@@ -100,24 +103,18 @@
             color: #fff;
         }
         @media (max-width: 600px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
             header nav a {
                 padding: 5px 10px;
                 margin: 5px 0;
             }
-            .showcase h1 {
-                font-size: 30px;
-            }
-            .showcase p {
-                font-size: 16px;
+            .showcase {
+                height: auto;
+                padding-top: 50px;
+                padding-bottom: 50px;
             }
             .course {
-                width: 100%;
+                width: 90%;
             }
-            
         }
     </style>
 </head>
@@ -125,43 +122,51 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html#home">Home</a>
-                <a href="#courses.html">Courses</a>
+                <a href="#home">Home</a>
+                <a href="courses.html">Courses</a>
                 <a href="about.html#about">About Us</a>
-                <a href="About.html#contact">Contact</a>
+                <a href="about.html#contact">Contact</a>
             </nav>
         </div>
     </header>
     
-    
+    <section class="showcase" id="home">
+        <div class="container">
+        </div>
+    </section>
+
     <div class="container">
-        <section id="courses" class="courses">
+        <section id="courses" class="courses-wrapper">
             <h2>Our Courses</h2>
-            <div class="course">
-                <img src="course1.png" alt="Course 1">
-                <h3>Course Title 1</h3>
-                <p>Brief description of Course 1. Learn about [topic] and enhance your skills in [field].</p>
-            </div>
-            <div class="course">
-                <img src="course2.png" alt="Course 2">
-                <h3>Course Title 2</h3>
-                <p>Brief description of Course 2. Learn about [topic] and enhance your skills in [field].</p>
-            </div>
-            <div class="course">
-                <img src="course3.png" alt="Course 3">
-                <h3>Course Title 3</h3>
-                <p>Brief description of Course 3. Learn about [topic] and enhance your skills in [field].</p>
-            </div>
-            <div class="course">
-                <img src="course4.png" alt="Course 4">
-                <h3>Course Title 4</h3>
-                <p>Brief description of Course 4. Learn about [topic] and enhance your skills in [field].</p>
+            <div class="courses">
+                <div class="course">
+                    <img src="course1.png" alt="Math Course">
+                    <h3>Math</h3>
+                    <p>Learn about algebra, geometry, calculus, and more to enhance your mathematical skills.</p>
+                </div>
+                <div class="course">
+                    <img src="course2.png" alt="Physics Course">
+                    <h3>Physics</h3>
+                    <p>Explore the principles of physics, from mechanics to quantum theory, to deepen your understanding of the universe.</p>
+                </div>
+                <div class="course">
+                    <img src="course3.png" alt="Chemistry Course">
+                    <h3>Chemistry</h3>
+                    <p>Understand the fundamentals of chemistry, including organic, inorganic, and physical chemistry.</p>
+                </div>
+                <div class="course">
+                    <img src="course4.png" alt="Biology Course">
+                    <h3>Biology</h3>
+                    <p>Study the science of life, from cell biology to genetics and ecology, to discover the living world.</p>
+                </div>
             </div>
         </section>
     </div>
     
     <footer>
-        <p>&copy; 2024 Online Course Platform</p>
+        <p>&copy; 2024 Drownford Academy</p>
     </footer>
+    <!-- Defer non-critical scripts -->
+    <script defer src="script.js"></script>
 </body>
 </html>
