@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #070303;
+            color: #ffffff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #000000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 4px solid #ffffff;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        header nav a:hover {
+            background: #f4b400;
+            color: #333;
+        }
+        .showcase {
+            background: url('course-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 400px;
+            text-align: center;
+            padding-top: 150px;
+        }
+        .showcase h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .course {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            color: #333;
+        }
+        .course:hover {
+            transform: translateY(-5px);
+        }
+        .course img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .course h3 {
+            padding: 10px;
+            font-size: 20px;
+            background: #050420;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+        .course p {
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            header nav a {
+                padding: 5px 10px;
+                margin: 5px 0;
+            }
+            .showcase h1 {
+                font-size: 30px;
+            }
+            .showcase p {
+                font-size: 16px;
+            }
+            .course {
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html#home">Home</a>
+                <a href="#courses.html">Courses</a>
+                <a href="about.html#about">About Us</a>
+                <a href="About.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="container">
+        <section id="courses" class="courses">
+            <h2>Our Courses</h2>
+            <div class="course">
+                <img src="course1.png" alt="Course 1">
+                <h3>Course Title 1</h3>
+                <p>Brief description of Course 1. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course2.png" alt="Course 2">
+                <h3>Course Title 2</h3>
+                <p>Brief description of Course 2. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course3.png" alt="Course 3">
+                <h3>Course Title 3</h3>
+                <p>Brief description of Course 3. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course4.png" alt="Course 4">
+                <h3>Course Title 4</h3>
+                <p>Brief description of Course 4. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Online Course Platform</p>
+    </footer>
+</body>
+</html>

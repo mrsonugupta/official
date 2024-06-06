@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonu Gupta's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #afaeae;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #000000;
+            color: #fdfdfd;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 4px solid #ffffff;
+        }
+        header h1 {
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        header h1 nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow nav links to wrap on smaller screens */
+        }
+        header h1 nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px; /* Reduced padding for nav links */
+            margin: 0 5px; /* Reduced margin for nav links */
+            text-transform: uppercase;
+            font-size: 14px; /* Smaller font size for nav links */
+        }
+        header h1 nav a:hover {
+            background: #f4b400;
+            color: #333;
+        }
+        .about, .contact {
+            margin: 10px 0;
+            padding: 10px;
+            background: #000000;
+            color: #fdfdfd;
+            border-radius: 10px; /* Rounded corners for the cards */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adding a thicker shadow for the 3D effect */
+            transition: transform 0.3s ease;
+        }
+        .about:hover, .contact:hover {
+            transform: translateY(-5px);
+        }
+        .about img, .contact img {
+            max-width: 20%; /* Ensure images resize on smaller screens */
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .about:hover img, .contact:hover img {
+            transform: scale(1.1);
+        }
+        .about p {
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        h2 {
+            color: #f4b400;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%; /* Full width on small screens */
+                padding: 10px;
+            }
+            header h1 {
+                padding: 5px 10px; /* Adjust padding on smaller screens */
+            }
+            header h1 nav a {
+                padding: 5px; /* Smaller padding for nav links */
+                margin: 5px 0; /* Adjust margin for better spacing */
+            }
+            .about, .contact {
+                margin: 10px 0; /* Reduce margin on smaller screens */
+                padding: 15px; /* Adjust padding for better fit */
+            }
+            .about p, .contact p {
+                font-size: 16px; /* Slightly smaller text for readability */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="courses.html#courses">Courses</a>
+                    <a href="about.html">About Us</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <img src="sonu.jpeg" alt="Your Photo">
+            <p>Hello! My name is Sonu Gupta. I have completed my graduation and am looking forward to exciting new opportunities. I am passionate about [Your Interests or Field of Work]. In my free time, I enjoy .</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <img src="sonu.jpeg" alt="Contact Image">
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email: <a href="mailto:sendmailsonugupta@gmail.com">sendmailsonugupta@gmail.com</a> (Click to send email)</li>
+                <li>Phone: <a href="https://wa.me/919262621383">+91-9262621383</a> (Click to send WhatsApp message)</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sonugupta" target="_blank">linkedin.com/in/sonugupta</a></li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Sonu Gupta</p>
+    </footer>
+</body>
+</html>
