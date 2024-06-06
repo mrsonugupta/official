@@ -4,71 +4,103 @@
     <meta name="google-site-verification" content="kT0p9IvI8DMA5Xb1Ne96XgVUQNH7Zo0Cbo1uR0dRvs4" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonu Gupta's Personal Webpage</title>
+    <title>Drownford Academy</title>
      <meta name="description" content="Sonu Gupta's Personal Webpage - Welcome to Sonu Gupta's personal webpage, where you can learn about his background, interests, and contact information.">
     <meta name="keywords" content="Sonu Gupta, personal webpage, about me, contact, portfolio, Drownford, Drownford Marketing Agency">
+  
     <style>
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #afaeae;
-            color: #333;
+            background-color: #ffffff;
+            color: #000000;
         }
         .container {
-            width: 90%;
+            width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
         }
         header {
-            background: #333;
+            background: #000000;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            border-bottom: 4px solid #f4b400;
-        }
-        header h1 {
-            margin: 0;
+            border-bottom: 4px solid #ffffff;
         }
         header nav {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         header nav a {
             color: #fff;
             text-decoration: none;
-            padding: 10px;
+            padding: 10px 20px;
             margin: 0 10px;
             text-transform: uppercase;
+            font-size: 14px;
         }
         header nav a:hover {
             background: #f4b400;
             color: #333;
         }
-        .about, .contact {
-            margin: 20px 0;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px; /* Rounded corners for the cards */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adding a thicker shadow for the 3D effect */
-            transition: transform 0.3s ease;
+        .showcase {
+            background: url('df.png') no-repeat center center/cover;
+            color: #fff;
+            height: 400px;
+            text-align: center;
+            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
         }
-        .about:hover, .contact:hover {
+        .showcase h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .course {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            color: #333;
+        }
+        .course:hover {
             transform: translateY(-5px);
         }
-        .about img, .contact img {
-            max-width: 40%;
+        .course img {
+            width: 100%;
             height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
-        .about:hover img, .contact:hover img {
-            transform: scale(1.1);
+        .course h3 {
+            padding: 10px;
+            font-size: 20px;
+            background: #050420;
+            color: #fff;
+            margin: 0;
+            text-align: center;
         }
-        .about p {
-            font-size: 18px;
+        .course p {
+            padding: 10px;
         }
         footer {
             text-align: center;
@@ -76,43 +108,80 @@
             background: #333;
             color: #fff;
         }
-        h2 {
-            color: #f4b400;
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            header nav a {
+                padding: 5px 10px;
+                margin: 5px 0;
+            }
+            .showcase {
+                height: auto;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            .showcase h1 {
+                font-size: 30px;
+            }
+            .showcase p {
+                font-size: 16px;
+            }
+            .course {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Sonu Gupta</h1>
             <nav>
-                <a href="#about">About Me</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="about.html#about">About Us</a>
+                <a href="about.html#contact">Contact</a>
             </nav>
         </div>
     </header>
     
-    <div class="container">
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <img src="sonu.jpeg" alt="Your Photo">
-            <p>Hello! I am <b>Sonu Gupta</b>. I am a <b>21 year old</b> young man who is a <b>graduate</b>. After my studies, I set foot in the workplace to make my dreams come true. Today I am the<b> CEO of Drownford Marketing Agency</b>, where we create new and <b>innovative marketing strategies</b> for different brands and clients. My passions and hobbies are quite diverse. For me, studying is a journey of infinite knowledge and I am always on the lookout for new subjects to understand and learn. Playing is also a hobby of mine. By playing games, I enjoy completing new challenges and refresh my mind. I believe that every day is a new opportunity to improve yourself and gain new knowledge. This very thought inspires me to grow older at every step..</p>
-        </section>
+    <section class="showcase" id="home">
+        <div class="container">
+           
+        </div>
+    </section>
 
-        <section id="contact" class="contact"> 
-            <h2>Contact</h2>
-            <img src="sonu.jpeg" alt="Contact Image">
-            <p>You can reach me at:</p>
-            <ul>
-                <li>Email: <a href="mailto:sendmailsonugupta@gmail.com">sendmailsonugupta@gmail.com</a> (Click to send email)</li>
-                <li>Phone: <a href="https://wa.me/919262621383">+91-9262621383</a> (Click to send WhatsApp message)</li>
-                <li>Facebook: <a href="https://www.facebook.com/profile.php?id=100062887253704" target="_blank">facebook.com/in/Sonu Gupta</a></li>
-            </ul>
+    <div class="container">
+        <section id="courses" class="courses">
+            <h2>Our Courses</h2>
+            <div class="course">
+                <img src="course1.png" alt="Course 1">
+                <h3>Math</h3>
+                <p>Brief description of Math. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course2.png" alt="Course 2">
+                <h3>Physics</h3>
+                <p>Brief description of Physics. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course3.png" alt="Course 3">
+                <h3>Cemistry</h3>
+                <p>Brief description of chemistry. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
+            <div class="course">
+                <img src="course4.png" alt="Course 4">
+                <h3>Biology</h3>
+                <p>Brief description of Biology. Learn about [topic] and enhance your skills in [field].</p>
+            </div>
         </section>
     </div>
     
     <footer>
-        <p>&copy; 2024 Sonu Gupta</p>
+        <p>&copy; 2024 Online Course Platform</p>
     </footer>
+    <!-- Defer non-critical scripts -->
+    <script defer src="script.js"></script>
 </body>
 </html>
