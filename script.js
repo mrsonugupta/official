@@ -1,101 +1,80 @@
-// Timer
-let timerSeconds = 0;
-let timerInterval;
-let isTimerActive = false;
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const taskForm = document.getElementById('taskForm');
+    const taskInput = document.getElementById('taskInput');
+    const taskDate = document.getElementById('taskDate');
+    const taskTime = document.getElementById('taskTime');
+    const taskList = document.getElementById('taskList');
+    const clearTasks = document.getElementById('clearTasks');
+    const timerMinutes = document.getElementById('timerMinutes');
+    const startTimer = document.getElementById('startTimer');
+    const timerDisplay = document.getElementById('timerDisplay');
+    const alarmTime = document.getElementById('alarmTime');
+    const setAlarm = document.getElementById('setAlarm');
 
-document.getElementById('startTimer').addEventListener('click', () => {
-    if (!isTimerActive) {
-        isTimerActive = true;
-        timerInterval = setInterval(() => {
-            timerSeconds++;
-            document.getElementById('timerDisplay').textContent = `${timerSeconds} seconds`;
+    // Add Task
+    taskForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const task = taskInput.value;
+        const date = taskDate.value;
+        const time = taskTime.value;
+        if (task) {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                ${task} - ${date} ${time}
+                <button class="delete">Delete</button>
+            `;
+            taskList.appendChild(listItem);
+
+            // Clear input fields
+            taskInput.value = '';
+            taskDate.value = '';
+            taskTime.value = '';
+
+            // Add event listener to the delete button
+            const deleteButton = listItem.querySelector('.delete');
+            deleteButton.addEventListener('click', () => {
+                taskList.removeChild(listItem);
+            });
+        }
+    });
+
+    // Clear All Tasks
+    clearTasks.addEventListener('click', () => {
+        taskList.innerHTML = '';
+    });
+
+    // Timer
+    startTimer.addEventListener('click', () => {
+        const minutes = parseInt(timerMinutes.value, 10);
+        if (isNaN(minutes) || minutes <= 0) return;
+        const endTime = Date.now() + minutes * 60000;
+        const interval = setInterval(() => {
+            const remainingTime = endTime - Date.now();
+            if (remainingTime <= 0) {
+                clearInterval(interval);
+                timerDisplay.textContent = 'Time’s up!';
+                return;
+            }
+            const minutesLeft = Math.floor(remainingTime / 60000);
+            const secondsLeft = Math.floor((remainingTime % 60000) / 1000);
+            timerDisplay.textContent = `${minutesLeft}m ${secondsLeft}s`;
         }, 1000);
-    }
-});
+    });
 
-document.getElementById('pauseTimer').addEventListener('click', () => {
-    isTimerActive = false;
-    clearInterval(timerInterval);
-});
-
-document.getElementById('resetTimer').addEventListener('click', () => {
-    isTimerActive = false;
-    clearInterval(timerInterval);
-    timerSeconds = 0;
-    document.getElementById('timerDisplay').textContent = '0 seconds';
-});
-
-// Alarm
-document.getElementById('setAlarm').addEventListener('click', () => {
-    const alarmTime = document.getElementById('alarmTime').value;
-    const alarmDate = new Date();
-    const [hours, minutes] = alarmTime.split(':');
-    alarmDate.setHours(hours, minutes, 0);
-
-    const now = new Date();
-    const timeToAlarm = alarmDate.getTime() - now.getTime();
-
-    if (timeToAlarm >= 0) {
+    // Alarm
+    setAlarm.addEventListener('click', () => {
+        const alarmTimeValue = alarmTime.value;
+        const [hours, minutes] = alarmTimeValue.split(':').map(Number);
+        const alarmDate = new Date();
+        alarmDate.setHours(hours);
+        alarmDate.setMinutes(minutes);
+        alarmDate.setSeconds(0);
+        const now = new Date();
+        const timeToAlarm = alarmDate - now;
+        if (timeToAlarm < 0) return;
         setTimeout(() => {
-            document.getElementById('alarmSound').play();
             alert('Alarm ringing!');
         }, timeToAlarm);
-    } else {
-        alert('Alarm time is in the past!');
-    }
-});
-
-// Task Management
-document.getElementById('addTask').addEventListener('click', () => {
-    const taskInput = document.getElementById('taskInput');
-    const task = taskInput.value;
-
-    if (task) {
-        const li = document.createElement('li');
-        li.textContent = task;
-        document.getElementById('taskList').appendChild(li);
-        taskInput.value = '';
-    }
-});
-
-// Pomodoro Timer
-let pomodoroMinutes = 25;
-let pomodoroSeconds = 0;
-let pomodoroInterval;
-let isPomodoroActive = false;
-
-document.getElementById('startPomodoro').addEventListener('click', () => {
-    if (!isPomodoroActive) {
-        isPomodoroActive = true;
-        pomodoroInterval = setInterval(() => {
-            if (pomodoroSeconds === 0) {
-                if (pomodoroMinutes === 0) {
-                    clearInterval(pomodoroInterval);
-                    isPomodoroActive = false;
-                    alert('Pomodoro session complete!');
-                    return;
-                }
-                pomodoroMinutes--;
-                pomodoroSeconds = 59;
-            } else {
-                pomodoroSeconds--;
-            }
-            const minutesDisplay = pomodoroMinutes.toString().padStart(2, '0');
-            const secondsDisplay = pomodoroSeconds.toString().padStart(2, '0');
-            document.getElementById('pomodoroDisplay').textContent = `${minutesDisplay}:${secondsDisplay}`;
-        }, 1000);
-    }
-});
-
-document.getElementById('pausePomodoro').addEventListener('click', () => {
-    isPomodoroActive = false;
-    clearInterval(pomodoroInterval);
-});
-
-document.getElementById('resetPomodoro').addEventListener('click', () => {
-    isPomodoroActive = false;
-    clearInterval(pomodoroInterval);
-    pomodoroMinutes = 25;
-    pomodoroSeconds = 0;
-    document.getElementById('pomodoroDisplay').textContent = '25:00';
+    });
 });
