@@ -1,5 +1,5 @@
 // Timer
-let timerSeconds = 0;
+let timerSeconds = 0; 
 let timerInterval;
 let isTimerActive = false;
 
