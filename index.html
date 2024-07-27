@@ -1,385 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="kT0p9IvI8DMA5Xb1Ne96XgVUQNH7Zo0Cbo1uR0dRvs4" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drownford Academy</title>
-     <meta name="description" content="Sonu Gupta's Personal Webpage - Welcome to Sonu Gupta's personal webpage, where you can learn about his background, interests, and contact information.">
-    <meta name="keywords" content="Sonu Gupta, personal webpage, about me, contact, portfolio, Drownford, Drownford Marketing Agency">
-   <!-- Firebase CDN Scripts -->
-     <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-     <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        header {
-            background: #000000;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 4px solid #ffffff;
-        }
-        header nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-        header nav a:hover {
-            background: #f4b400;
-            color: #333;
-        }
-        .showcase {
-            background: url('df.png') no-repeat center center/cover;
-            color: #fff;
-            height: 400px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-        .courses-wrapper {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .courses {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .course {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            width: 300px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            color: #333;
-        }
-        .course:hover {
-            transform: translateY(-5px);
-        }
-        .course img {
-            width: 100%;
-            height: auto;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .course h3 {
-            padding: 10px;
-            font-size: 20px;
-            background: #050420;
-            color: #fff;
-            margin: 0;
-            text-align: center;
-        }
-        .course p {
-            padding: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: #fff;
-        }
-        @media (max-width: 600px) {
-            header nav a {
-                padding: 5px 10px;
-                margin: 5px 0;
-            }
-            .showcase {
-                height: auto;
-                padding-top: 50px;
-                padding-bottom: 50px;
-            }
-            .course {
-                width: 90%;
-            }
-             /* Modal styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            padding-top: 60px; /* Space from top */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto; /* 5% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-        }
-
-        /* Close button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        }
-    </style>
+    <title>Time Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <a href="#home">Home</a>
-                <a href="courses.html">Courses</a>
-                <a href="about.html#about">About Us</a>
-                <a href="about.html#contact">Contact</a>
-                <a href="#" id="login-link">Login</a>
-                <a href="#" id="logout-link" style="display:none;">Logout</a>
-            </nav>
-        </div>
+        <h1>Time Management Tool</h1>
     </header>
-    
-    <section class="showcase" id="home">
-        <div class="container">
-        </div>
-    </section>
 
-    <div class="container">
-        <section id="courses" class="courses-wrapper">
-            <h2>Our Courses</h2>
-            <div class="courses">
-                <div class="course">
-                    <img src="course1.png" alt="Math Course">
-                    <h3>Math</h3>
-                    <p>Learn about algebra, geometry, calculus, and more to enhance your mathematical skills.</p>
-                </div>
-                <div class="course">
-                    <img src="course2.png" alt="Physics Course">
-                    <h3>Physics</h3>
-                    <p>Explore the principles of physics, from mechanics to quantum theory, to deepen your understanding of the universe.</p>
-                </div>
-                <div class="course">
-                    <img src="course3.png" alt="Chemistry Course">
-                    <h3>Chemistry</h3>
-                    <p>Understand the fundamentals of chemistry, including organic, inorganic, and physical chemistry.</p>
-                </div>
-                <div class="course">
-                    <img src="course4.png" alt="Biology Course">
-                    <h3>Biology</h3>
-                    <p>Study the science of life, from cell biology to genetics and ecology, to discover the living world.</p>
-                </div>
-            </div>
-        </section>
-        <section id="login" style="display:none;">
-            <h2>Login</h2>
-            <form id="login-form">
-                <input type="email" id="login-email" placeholder="Email" required>
-                <input type="password" id="login-password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
-        </section>
-        <section id="signup" style="display:none;">
-            <h2>Sign Up</h2>
-            <form id="signup-form">
-                <input type="email" id="signup-email" placeholder="Email" required>
-                <input type="password" id="signup-password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
-        </section>
-    </div>
-    
+    <main>
+        <!-- Timer Section -->
+        <div class="container">
+            <h2>Timer</h2>
+            <p id="timerDisplay">0 seconds</p>
+            <button class="action-btn" id="startTimer">Start</button>
+            <button class="action-btn" id="pauseTimer">Pause</button>
+            <button class="action-btn" id="resetTimer">Reset</button>
+        </div>
+
+        <!-- Alarm Section -->
+        <div class="container">
+            <h2>Set Alarm</h2>
+            <input type="time" id="alarmTime">
+            <button class="action-btn" id="setAlarm">Set Alarm</button>
+            <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+        </div>
+
+        <!-- Task Management Section -->
+        <div class="container">
+            <h2>Task Manager</h2>
+            <input type="text" id="taskInput" placeholder="Add a task">
+            <button class="action-btn" id="addTask">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Pomodoro Timer Section -->
+        <div class="container">
+            <h2>Pomodoro Timer</h2>
+            <p id="pomodoroDisplay">25:00</p>
+            <button class="action-btn" id="startPomodoro">Start</button>
+            <button class="action-btn" id="pausePomodoro">Pause</button>
+            <button class="action-btn" id="resetPomodoro">Reset</button>
+        </div>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Drownford Academy</p>
+        <p>&copy; 2024 Time Management Tool. All rights reserved.</p>
     </footer>
-    <div id="loginModal" class="modal" style="display:none;">
-        <div class="container">
-            <section id="login" class="login-wrapper">
-                <h2>Login</h2>
-                <!-- Login form -->
-                <form id="login-form">
-                    <input type="email" id="login-email" placeholder="Email" required>
-                    <input type="password" id="login-password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
-            </section>
-        </div>
-    </div>
 
-    <div id="signupModal" class="modal" style="display:none;">
-        <div class="container">
-            <section id="signup" class="signup-wrapper">
-                <h2>Sign Up</h2>
-                <!-- Signup form -->
-                <form id="signup-form">
-                    <input type="email" id="signup-email" placeholder="Email" required>
-                    <input type="password" id="signup-password" placeholder="Password" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
-            </section>
-        </div>
-    </div>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAUSEJ7I1qFyUCX-2-gb4QYTdIw3hK80Y4",
-            authDomain: "poetic-hexagon-410217.firebaseapp.com",
-            projectId: "poetic-hexagon-410217",
-            storageBucket: "poetic-hexagon-410217.appspot.com",
-            messagingSenderId: "154306269453",
-            appId: "1:154306269453:web:c9777aaa8e604837aee044",
-            measurementId: "G-09ZS87PGKW"
-        };
-
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-
-        // DOM elements
-        const loginLink = document.getElementById('login-link');
-        const logoutLink = document.getElementById('logout-link');
-        const loginSection = document.getElementById('login');
-        const signupSection = document.getElementById('signup');
-        const loginForm = document.getElementById('login-form');
-        const signupForm = document.getElementById('signup-form');
-        const showSignupLink = document.getElementById('show-signup');
-        const showLoginLink = document.getElementById('show-login');
-
-        // Show login or signup form
-        loginLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            loginSection.style.display = 'block';
-            signupSection.style.display = 'none';
-        });
-
-        showSignupLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            loginSection.style.display = 'none';
-            signupSection.style.display = 'block';
-        });
-
-        showLoginLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            loginSection.style.display = 'block';
-            signupSection.style.display = 'none';
-        });
-
-        // Login form submit
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('login-email').value;
-            const password = document.getElementById('login-password').value;
-
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    console.log('Logged in:', userCredential.user);
-                    loginSection.style.display = 'none';
-                    logoutLink.style.display = 'inline';
-                    loginLink.style.display = 'none';
-                })
-                .catch((error) => {
-                    console.error('Error logging in:', error);
-                    alert(error.message);
-                });
-        });
-
-        // Signup form submit
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('signup-email').value;
-            const password = document.getElementById('signup-password').value;
-
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    console.log('User signed up:', userCredential.user);
-                    signupSection.style.display = 'none';
-                    logoutLink.style.display = 'inline';
-                    loginLink.style.display = 'none';
-                })
-                .catch((error) => {
-                    console.error('Error signing up:', error);
-                    alert(error.message);
-                });
-        });
-
-        // Logout link click
-        logoutLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            signOut(auth).then(() => {
-                console.log('User logged out');
-                logoutLink.style.display = 'none';
-                loginLink.style.display = 'inline';
-                loginSection.style.display = 'none';
-                signupSection.style.display = 'none';
-            }).catch((error) => {
-                console.error('Error logging out:', error);
-                alert(error.message);
-            });
-        });
-        // Logged in event
-signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        console.log('User logged in:', userCredential.user.email);
-        // Add code to handle login event
-    })
-    .catch((error) => {
-        console.error('Error logging in:', error);
-        alert(error.message);
-    });
-
-// Logged out event
-signOut(auth).then(() => {
-    console.log('User logged out');
-    // Add code to handle logout event
-}).catch((error) => {
-    console.error('Error logging out:', error);
-    alert(error.message);
-});
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
