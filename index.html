@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Management Tool</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <header>
-            <h1>Time Management Tool</h1>
-        </header>
-        <main>
-            <div class="card" id="taskManager">
-                <h2>Task Manager</h2>
-                <form id="taskForm">
-                    <input type="text" id="taskInput" placeholder="Enter a task">
-                    <input type="date" id="taskDate">
-                    <input type="time" id="taskTime">
-                    <button type="submit">Add Task</button>
-                    <button type="button" id="clearTasks">Clear Tasks</button>
-                </form>
-                <ul id="taskList"></ul>
-            </div>
-            <div class="card" id="timer"> 
-                <h2>Timer</h2>
-                <input type="number" id="timerMinutes" placeholder="Minutes" min="1">
-                <button id="startTimer">Start Timer</button>
-                <div id="timerDisplay"></div>
-            </div>
-            <div class="card" id="alarm">
-                <h2>Alarm</h2>
-                <input type="time" id="alarmTime">
-                <button id="setAlarm">Set Alarm</button>
-            </div>
-        </main>
-        <footer>
-            <p>© 2024 Time Management Tool</p>
-        </footer>
+    <header>
+        <h1>Task Manager</h1>
+      <!-- Theme button -->
+<button id="theme-btn">Theme</button>
+        <span id="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span id="notification-count">0</span>
+        </span>
+    </header>
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter task">
+        <select id="priority-select">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+        <label for="due-date-input">Due Date:</label>
+<input type="datetime-local" id="due-date-input" name="due-date-input">
+        <button id="add-task-btn">Add Task</button>
+    </form>
+    <div id="task-card">
+        <ul id="task-list"></ul>
     </div>
+    <div id="progress-tracker">
+        <h2>Progress: <span id="progress-percent">0%</span></h2>
+        <div id="progress-bar"></div>
+    </div>
+    <div id="notifications">
+        <h2>Notifications</h2>
+        <ul id="notification-list"></ul>
+    </div>
+    <div id="reminders">
+        <h2>Reminders</h2>
+        <ul id="reminder-list"></ul>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
